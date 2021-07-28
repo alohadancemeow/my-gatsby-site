@@ -36,7 +36,7 @@ export const PostsPage = () => {
                   mb: 4,
                 }}
               >
-                <Input value={query} placeholder="Search" onChange={onSearch} />
+                <Input value={query} placeholder="ค้นหาโพสต์..." onChange={onSearch} />
               </Box>
 
               <Grid

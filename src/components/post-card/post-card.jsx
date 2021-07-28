@@ -115,7 +115,7 @@ export const PostCard = ({ title, featuredImageUrl, tags, date, dateModified, ex
               : null}
           </Box>
           <Box sx={{ p: 3 }}>
-            <Text sx={{ color: 'secondary', textAlign: 'right' }}>View post</Text>
+            <Text sx={{ color: 'secondary', textAlign: 'right' }}>อ่านโพสต์</Text>
           </Box>
         </Card>
       </Link>

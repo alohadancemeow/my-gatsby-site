@@ -10,13 +10,6 @@ import { PostCard } from "../components/post-card";
 import { ProfileInfo } from "../components/profile-info";
 import { NewsletterForm } from "../components/newsletter-form";
 
-<!-- For dashboard -->
-
-import { PostsByMonthChart } from "../components/posts-by-month-chart";
-import { PostsByDayChart } from "../components/posts-by-day-chart";
-import { WordCountChart } from "../components/word-count-chart";
-import { TagPercentChart } from "../components/tag-percent-chart";
-
 <Alert variant="success">
   Hi! I'm Hai [はい], Welcome to my blog. (หวัดดี 👋 )
 </Alert>
@@ -97,6 +90,11 @@ import { TagPercentChart } from "../components/tag-percent-chart";
 
 # Latest Posts
 
+
+
+> 📝 ``เอาล่ะ.. มาอ่านโพสต์ล่าสุดกันเลยยยยยยยยยยยยยย``
+
+<Divider />
 <Divider />
 
 <SourceList filter="posts">
@@ -148,99 +146,14 @@ import { TagPercentChart } from "../components/tag-percent-chart";
   }}
 >
   <Box>
-    <Button as={GatsbyLink} variant="ghost" to="/posts">
-      More posts{" "}
+    <Button as={GatsbyLink} variant="ghost" to="/posts" >
+      <span style={{fontSize: '1.3rem'}}>อ่านโพสต์ทั้งหมด{" "}
       <Box as="span" role="img" aria-label="pencil">
         ✏️
       </Box>
+      </span>
     </Button>
   </Box>
 </Flex>
 
 <Divider />
-<Divider />
-
-<!-- Dashboard section -->
-
-# Dashboard
-
-Here are the totals, counts and other statistics calculated from posts and tags used around my blog
-
-<Divider />
-
-## tags by usage
-
-<Grid sx={{gridTemplateColumns: ['1fr', '1fr 1fr'], gridGap: 3}}>
-
-<TagPercentChart year={0} color={"primary"} />
-
-<TagPercentChart year={-1} color={"secondary"} />
-
-</Grid>
-
-<Divider />
-<Divider />
-
-## posts by day
-
-<Grid sx={{gridTemplateColumns: ['1fr', '1fr 1fr'], gridGap: 3}}>
-
-<PostsByDayChart
-  config={{
-    year: 0,
-    color: "primary",
-  }}
-/>
-
-<PostsByDayChart
-  config={{
-    year: -1,
-    color: "secondary",
-  }}
-/>
-
-</Grid>
-
-<Divider />
-<Divider />
-
-## posts by month
-
-<Grid sx={{gridTemplateColumns: ['1fr', '1fr 1fr'], gridGap: 3}}>
-
-<PostsByMonthChart
-  config={{
-    year: 0,
-    color: "primary",
-  }}
-/>
-
-<PostsByMonthChart
-  config={{
-    year: -1,
-    color: "secondary",
-  }}
-/>
-
-</Grid>
-
-<Divider />
-<Divider />
-
-## word count statistics
-
-<Grid sx={{gridTemplateColumns: ['1fr', '1fr 1fr'], gridGap: 3}}>
-
-<WordCountChart
-  title="Average word count"
-  dimension="words"
-  config={{ year: 0, color: "primary" }}
-/>
-
-<WordCountChart
-  title="Average word count"
-  dimension="words"
-  config={{ year: -1, color: "secondary" }}
-/>
-
-</Grid>

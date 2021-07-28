@@ -1,13 +1,30 @@
 ---
 navigationLabel: NOTE
 ---
-<!-- For projects -->
-import { PostCard } from '../components/post-card'
 
+<!-- For projects -->
+
+import { ProjectCard } from "../components/project-card";
+
+<!-- For dashboard -->
+
+import { PostsByMonthChart } from "../components/posts-by-month-chart";
+import { PostsByDayChart } from "../components/posts-by-day-chart";
+import { WordCountChart } from "../components/word-count-chart";
+import { TagPercentChart } from "../components/tag-percent-chart";
 
 # Note
 
-<!--
+<!-- Alert message -->
+
+<Alert variant="secondary">
+  📝 Note for me : คือเอาไว้เก็บอะไรนิดหน่อย สำหรับบล็อคนี้
+  และแนะนำตัวเองสักเล็กน้อย. 👋
+</Alert>
+
+<Divider />
+<Divider />
+
 <Box
 sx={{
     borderStyle: 'solid',
@@ -16,13 +33,19 @@ sx={{
     p: 4,
     }}
 >
- 👋 Note for me : คือเอาเก็บอะไรเล็กๆน้อยๆ สำหรับตัวเองและบล็อคนี้.
 
-</Box> -->
+<Heading as="h3" variant="styles.h3">
+  💬 Quotes:
+</Heading>
+" IF YOU ARE BORN POOR ITS NOT YOUR MISTAKE, BUT IF YOU DIE POOR, ITS YOUR
+MISTAKE " <br />
+<span style={{ opacity: "0.7" }}>
+  <strong>- Bill Gates -</strong>
+</span>
+
+</Box>
 
 <Divider />
-
-> 📑 **Note for me** : คือเอาเก็บอะไรเล็กๆน้อยๆ สำหรับบล็อคนี้ และแนะนำตัวเองสักเล็กน้อย.
 
 <Divider />
 <Divider />
@@ -101,7 +124,9 @@ I live in Thailand. <br />
 <Divider />
 <Divider />
 
-## Projects
+<!-- Projects section -->
+
+# Projects
 
 <Divider />
 
@@ -109,13 +134,15 @@ I live in Thailand. <br />
   {(posts) => (
     <Grid
       sx={{
-        gridTemplateColumns: ['1fr', '1fr', '1fr 1fr 1fr'],
+        gridTemplateColumns: ["1fr", "1fr", "1fr 1fr 1fr"],
       }}
     >
       {posts
         .filter((edge) => !edge.node.frontmatter.isPrivate)
         .reduce((posts, post) => {
-          return post.node.frontmatter.pinned ? [post, ...posts] : [...posts, post]
+          return post.node.frontmatter.pinned
+            ? [post, ...posts]
+            : [...posts, post];
         }, [])
         .map((edge, index) => {
           const {
@@ -123,9 +150,9 @@ I live in Thailand. <br />
             frontmatter: { title, tags, date, dateModified, pinned },
             excerpt,
             fields: { slug },
-          } = edge.node
+          } = edge.node;
           return (
-            <PostCard
+            <ProjectCard
               key={index}
               title={title}
               featuredImageUrl={featuredImageUrl}
@@ -136,8 +163,98 @@ I live in Thailand. <br />
               slug={slug}
               pinned={pinned}
             />
-          )
+          );
         })}
     </Grid>
   )}
 </SourceList>
+
+<Divider />
+<Divider />
+<Divider />
+
+<!-- Dashboard section -->
+
+# Dashboard
+
+> **Note** : ผลรวม จำนวน และสถิติอื่นๆ ที่คำนวณจากโพสต์และแท็กทั้งหมดที่ใช้ในบล็อคแห่งนี้
+
+<Divider />
+<Divider />
+
+## tags by usage
+
+<Grid sx={{gridTemplateColumns: ['1fr', '1fr 1fr'], gridGap: 3}}>
+
+<TagPercentChart year={0} color={"primary"} />
+
+<TagPercentChart year={-1} color={"secondary"} />
+
+</Grid>
+
+<Divider />
+<Divider />
+
+## posts by day
+
+<Grid sx={{gridTemplateColumns: ['1fr', '1fr 1fr'], gridGap: 3}}>
+
+<PostsByDayChart
+  config={{
+    year: 0,
+    color: "primary",
+  }}
+/>
+
+<PostsByDayChart
+  config={{
+    year: -1,
+    color: "secondary",
+  }}
+/>
+
+</Grid>
+
+<Divider />
+<Divider />
+
+## posts by month
+
+<Grid sx={{gridTemplateColumns: ['1fr', '1fr 1fr'], gridGap: 3}}>
+
+<PostsByMonthChart
+  config={{
+    year: 0,
+    color: "primary",
+  }}
+/>
+
+<PostsByMonthChart
+  config={{
+    year: -1,
+    color: "secondary",
+  }}
+/>
+
+</Grid>
+
+<Divider />
+<Divider />
+
+## word count statistics
+
+<Grid sx={{gridTemplateColumns: ['1fr', '1fr 1fr'], gridGap: 3}}>
+
+<WordCountChart
+  title="Average word count"
+  dimension="words"
+  config={{ year: 0, color: "primary" }}
+/>
+
+<WordCountChart
+  title="Average word count"
+  dimension="words"
+  config={{ year: -1, color: "secondary" }}
+/>
+
+</Grid>
