@@ -37,6 +37,13 @@ export default {
     placeholder: '#4e4b85',
   },
 
+  // Config fonts
+  // fonts: {
+  //   ...baseTheme.fonts,
+  //   body: 'Inconsolata, monospace',
+  //   heading: 'Inconsolata, monospace',
+  // },
+
   styles: {
     ...baseTheme.styles,
     root: {
