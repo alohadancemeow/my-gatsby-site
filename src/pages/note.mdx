@@ -1,7 +1,143 @@
 ---
 navigationLabel: NOTE
 ---
+<!-- For projects -->
+import { PostCard } from '../components/post-card'
 
-# Note for me
 
-... here's some content for this post
+# Note
+
+<!--
+<Box
+sx={{
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: 'surface',
+    p: 4,
+    }}
+>
+ 👋 Note for me : คือเอาเก็บอะไรเล็กๆน้อยๆ สำหรับตัวเองและบล็อคนี้.
+
+</Box> -->
+
+<Divider />
+
+> 📑 **Note for me** : คือเอาเก็บอะไรเล็กๆน้อยๆ สำหรับบล็อคนี้ และแนะนำตัวเองสักเล็กน้อย.
+
+<Divider />
+<Divider />
+
+<!-- About -->
+
+<Grid
+  sx={{ 
+    gridTemplateColumns: ['1fr', '1fr 1fr'],
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: 'surface',
+    p: 4,
+    }}
+>
+
+<Box>
+
+## contact me
+
+<Heading as="h3" variant="styles.h3" marginBottom={1}>
+  Email
+</Heading>
+<Link
+  href="mailto:rabbit.bot@outlook.com"
+  target="_blank"
+  variant="styles.a"
+  rel="noopener"
+>
+  rabbit.bot@outlook.com
+</Link>
+<Divider />
+
+<Heading as="h3" variant="styles.h3" marginBottom={1}>
+  GitHub
+</Heading>
+<Link
+  href="https://github.com/alohadancemeow"
+  target="_blank"
+  variant="styles.a"
+  rel="noopener"
+>
+  https://github.com/alohadancemeow
+</Link>
+<Divider />
+
+<Heading as="h3" variant="styles.h3" marginBottom={1}>
+  Steam
+</Heading>
+<Link
+  href="https://steamcommunity.com/profiles/76561198144315513/"
+  target="_blank"
+  variant="styles.a"
+  rel="noopener"
+>
+  https://steamcommunity.com/profiles/76561198144315513
+</Link>
+<Divider />
+
+</Box>
+
+<Box>
+
+## about me
+
+Hi there! 🖐️ I'm Hai [はい] <br />
+I live in Thailand. <br />
+`🍉 aka :` <br />
+`alohadancemeow` _[In-Social]_ <br />
+`3rd rabbit` _[In-Game]_ <br />
+
+</Box>
+
+</Grid>
+
+<Divider />
+<Divider />
+
+## Projects
+
+<Divider />
+
+<SourceList filter="projects">
+  {(posts) => (
+    <Grid
+      sx={{
+        gridTemplateColumns: ['1fr', '1fr', '1fr 1fr 1fr'],
+      }}
+    >
+      {posts
+        .filter((edge) => !edge.node.frontmatter.isPrivate)
+        .reduce((posts, post) => {
+          return post.node.frontmatter.pinned ? [post, ...posts] : [...posts, post]
+        }, [])
+        .map((edge, index) => {
+          const {
+            featuredImageUrl,
+            frontmatter: { title, tags, date, dateModified, pinned },
+            excerpt,
+            fields: { slug },
+          } = edge.node
+          return (
+            <PostCard
+              key={index}
+              title={title}
+              featuredImageUrl={featuredImageUrl}
+              tags={tags}
+              date={date}
+              dateModified={dateModified}
+              excerpt={excerpt}
+              slug={slug}
+              pinned={pinned}
+            />
+          )
+        })}
+    </Grid>
+  )}
+</SourceList>
