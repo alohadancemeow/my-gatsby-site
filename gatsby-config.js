@@ -1,33 +1,16 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+// require('dotenv').config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
 
 module.exports = {
   siteMetadata: {
     name: 'alohadancemeow',
-    description:
-      'Jamstack Developer: React, Gatsby, JavaScript, TypeScript, CSS-in-Js, Storybook, TDD & a tiny bit of Apollo/GraphQL/Node',
-    keywords: [
-      'React',
-      'Gatsby',
-      'JavaScript',
-      'TypeScript',
-      'Flow',
-      'styled-components',
-      'Theme UI',
-      'Jest',
-      'Enzyme',
-      'React Testing Libary',
-      'Node.js',
-      'Fauna',
-      'Jamstack',
-      'Component Library',
-      'Serverless Functions',
-    ],
-    siteUrl: 'https://paulie.dev',
-    siteImage: 'https://paulie.dev/images/paulie-open-graph-image.jpg',
-    profileImage: ``,
-    lang: `en`,
+    description: "I like blogs",
+    keywords: ["tech", "blog", "boop"],
+    siteUrl: 'http://localhost:8000/',
+    siteImage: 'icon.png', // pop an image in the static folder to use it as the og:image,
+    profileImage: 'icon.png',
+    lang: `en, th`,
     config: {
       sidebarWidth: 200,
     },
