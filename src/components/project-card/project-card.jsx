@@ -73,7 +73,7 @@ export const ProjectCard = ({ title, featuredImageUrl, tags, date, dateModified,
                     </Box>
 
                     <Box sx={{ p: 3, pt: 0 }}>
-                        <Text sx={{ color: 'secondary' }}>View project</Text>
+                        <Text sx={{ color: 'secondary' }}>อย่าเข้ามาดูครับ</Text>
                     </Box>
                 </Card>
             </Link>
