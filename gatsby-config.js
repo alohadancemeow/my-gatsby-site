@@ -51,11 +51,11 @@ module.exports = {
         display: 'swap'
       }
     },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        exclude: [`/dummy-page/`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-sitemap`,
+    //   options: {
+    //     exclude: [`/dummy-page/`],
+    //   },
+    // },
   ],
 }
