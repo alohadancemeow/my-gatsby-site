@@ -48,7 +48,7 @@ export const NewsletterForm = () => {
               disabled
             />
 
-            <Button variant="success">
+            <Button variant="success" style={{fontFamily: 'JetBrains Mono, monospace'}}>
               Say Hi 🖐️
             </Button>
 

@@ -38,11 +38,12 @@ export default {
   },
 
   // Config fonts
-  // fonts: {
-  //   ...baseTheme.fonts,
-  //   body: 'Inconsolata, monospace',
-  //   heading: 'Inconsolata, monospace',
-  // },
+  fonts: {
+    ...baseTheme.fonts,
+    body: 'JetBrains Mono, monospace',
+    heading: 'JetBrains Mono, monospace',
+    code : 'JetBrains Mono, monospace',
+  },
 
   styles: {
     ...baseTheme.styles,
