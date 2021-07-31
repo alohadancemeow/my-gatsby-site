@@ -5,10 +5,20 @@
 module.exports = {
   siteMetadata: {
     name: 'alohadancemeow',
-    description: "I like blogs",
-    keywords: ["tech", "blog", "articles"],
-    siteUrl: 'http://localhost:8000/',
-    siteImage: 'icon.png', // pop an image in the static folder to use it as the og:image,
+    description: "I like blogs, gatsby, react, coding",
+    keywords: [
+      "tech", 
+      "blog", 
+      "articles", 
+      "review", 
+      "gatsby-theme-termianl", 
+      "coding",
+      "learing gatsby.js",
+      "react.js",
+      "alohadancemeow",
+    ],
+    siteUrl: 'https://alohadancemeowblog.gatsbyjs.io/',
+    siteImage: 'code3.1.png', // pop an image in the static folder to use it as the og:image,
     profileImage: 'icon.png',
     lang: `en, th`,
     config: {
