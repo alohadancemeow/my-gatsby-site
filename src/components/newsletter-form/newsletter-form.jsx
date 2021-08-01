@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Grid, Text, Heading, Button, Input, Link } from 'theme-ui'
+import { Box, Grid, Text, Heading, Button, Input } from 'theme-ui'
 
 export const NewsletterForm = () => {
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link as GatsbyLink } from 'gatsby'
 import { format } from 'date-fns'
-import { Flex, Box, Badge, Link, Card, Heading, Text } from 'theme-ui'
+import { Box, Link, Card, Heading, Text } from 'theme-ui'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 export const ProjectCard = ({ title, featuredImageUrl, tags, date, dateModified, excerpt, slug, pinned }) => {
