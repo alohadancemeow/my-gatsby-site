@@ -29,7 +29,7 @@ import { RecationBox } from "../../../components/reaction-box";
 import React from 'react' // อันเชิญ React เข้ามาทำงานเพื่อให้เขียน JSX ได้
 
 // สร้าง Component เท่ๆ แบบ Function
-const App = () = {
+const App = () => {
     return <div> Hi! Mom </div> // ส่วนที่ return ออกมามันคือ Html tag. เห็นปะ
 }
 export default App // export ไปใช้ที่ส่วนอื่นได้
@@ -54,7 +54,7 @@ export default App // export ไปใช้ที่ส่วนอื่นไ
 // # App Component
 import React, { useState } from 'react' // อันเชิญ useState มาเพื่อเก็บค่าต่างๆ
 
-const App = () = {
+const App = () => {
     // ประกาศใช้ useState 
     // useState => return ค่าเป็น array ตัวแรกคือ ชื่อ state และ ตัวสองคือชื่อ function
     // ใน () คือค่าเริ่มต้น จะกำหนดเป็นอะไรก็ได้ แต่เราจะกำหนดเป็น false ใครจะทำไม
@@ -71,7 +71,7 @@ const App = () = {
 export default App
 
 // # PageA Component => รับ props (state) มาจาก App Compoent
-const PageA  = ({ state }) = {
+const PageA  = ({ state }) => {
     // log state ออกมาดูหน่อยสิ
     console.log(state) // output => false
     return (
