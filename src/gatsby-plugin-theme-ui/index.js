@@ -38,11 +38,14 @@ export default {
   },
 
   // Config fonts
+  // 1. JetBrains Mono [eng]
+  // 2. Athiti [th] 
+  // 3. Bai Jamjuree [th]
   fonts: {
     ...baseTheme.fonts,
-    body: 'JetBrains Mono, monospace',
-    heading: 'JetBrains Mono, monospace',
-    code : 'JetBrains Mono, monospace',
+    body: 'JetBrains Mono, Bai Jamjuree',
+    heading: 'JetBrains Mono, Bai Jamjuree',
+    code : 'JetBrains Mono, Bai Jamjuree',
   },
 
   styles: {
