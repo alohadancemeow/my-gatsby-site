@@ -33,7 +33,3 @@ npm run develop
 - [react-svg-bubble-slider](https://github.com/PaulieScanlon/react-svg-bubble-slider)
 - [MDX Embed](https://github.com/PaulieScanlon/mdx-embed)
 - [Paul Scanlon](https://github.com/PaulieScanlon) 🙏 Your work is amazing, You inspired me to learn Gatsby.
-
-### 👋 Live site:
-
-- [alohadancemeow](https://alohadancemeowblog.gatsbyjs.io/)
