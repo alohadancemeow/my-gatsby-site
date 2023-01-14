@@ -1,4 +1,4 @@
-## Alohadancemeow | Blog
+## Gatsby Blog
 
 > This project is made for fun, practice, learning Gatsby.js, and article writing. ✌️
 
